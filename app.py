@@ -43,7 +43,10 @@ def sse():
     def generate():
         while True:
             now = datetime.now().ctime()
-            yield "data: {}\n\n".format(now)
+
+            yield ': this is a comment\n'
+            yield f'data: {now}\n'
+            yield '\n'
 
             time.sleep(3)
 
